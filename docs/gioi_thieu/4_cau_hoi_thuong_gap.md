@@ -1,0 +1,104 @@
+---
+sidebar_position: 4
+---
+
+# Câu hỏi thường gặp
+
+## Tổng quan
+
+<details>
+<summary>Miniapp khác gì với web app thông thường?</summary>
+
+Miniapp chạy trong môi trường sandbox của Tammi Superapp, có quyền truy cập vào các tính năng native (camera, GPS, bluetooth...) thông qua Bridge API (jsAPI). Web app thông thường chỉ chạy trong browser với các API web tiêu chuẩn.
+
+</details>
+
+<details>
+<summary>Miniapp có thể chạy offline không?</summary>
+
+Có. Bundle miniapp được tải về và cache trên thiết bị sau lần đầu tiên. Các chức năng không yêu cầu API call có thể hoạt động hoàn toàn offline.
+
+</details>
+
+<details>
+<summary>Tôi đã có Web (H5/SPA) sẵn, có thể đưa lên nền tảng miniapp không?</summary>
+
+Có. Vì Bridge API (jsAPI) là tùy chọn, một SPA thuần có thể chạy trực tiếp trên nền tảng miniapp mà không cần chỉnh sửa nhiều. Xem [Hướng dẫn tích hợp SPA](../quick_start/tich_hop_spa).
+
+</details>
+
+<details>
+<summary>Kích thước tối đa của miniapp là bao nhiêu?</summary>
+
+Package miniapp không nên vượt quá **2MB** để đảm bảo trải nghiệm người dùng tốt.
+
+</details>
+
+## Bridge API (jsAPI)
+
+<details>
+<summary>Bridge API là gì?</summary>
+
+Bridge API (còn gọi là jsAPI) là lớp trung gian cho phép miniapp giao tiếp với các tính năng native của thiết bị. Mọi tương tác với camera, GPS, bluetooth, file system... đều phải đi qua Bridge API.
+
+</details>
+
+<details>
+<summary>Tại sao miniapp không thể truy cập trực tiếp tính năng native?</summary>
+
+Miniapp chạy trong sandbox — môi trường cách ly để đảm bảo bảo mật và ổn định. Bridge API là cầu nối duy nhất được SuperApp cung cấp và kiểm soát.
+
+</details>
+
+<details>
+<summary>Có sample code để tham khảo không?</summary>
+
+Có. Repo mẫu với đầy đủ jsAPI: https://github.com/mahou-anisphia/miniapp-sample-code
+
+</details>
+
+## Phát triển & Triển khai
+
+<details>
+<summary>Tôi có thể sử dụng framework nào để phát triển miniapp?</summary>
+
+Miniapp là SPA thuần (HTML/CSS/JS), bạn có thể sử dụng bất kỳ framework nào: React, Vue, Angular, hoặc vanilla JS.
+
+</details>
+
+<details>
+<summary>Tại sao quy trình deploy có nhiều bước (local preview, tạo phiên bản, publish)?</summary>
+
+Quy trình này giúp phân tách rõ ràng:
+
+- **Local preview**: Test nhanh trên máy dev
+- **Tạo phiên bản (chưa publish)**: Test trên thiết bị thật với môi trường gần production
+- **Publish**: Phát hành chính thức cho người dùng
+
+Chi tiết xem [Quy trình phát triển](../quick_start/quy_trinh).
+
+</details>
+
+<details>
+<summary>Phiên bản test có cần trùng lịch sử với phiên bản trước không?</summary>
+
+Không. Với local preview và tạo phiên bản (chưa publish), bạn có thể tạo bao nhiêu tùy ý. Phiên bản sau không cần trùng lịch sử với phiên bản trước — hệ thống quản lý từng phiên bản độc lập.
+
+</details>
+
+<details>
+<summary>Miniapp có giới hạn memory không?</summary>
+
+Có. Miniapp có giới hạn memory khoảng **100MB**. Vượt quá sẽ bị force close.
+
+</details>
+
+## Hỗ trợ
+
+<details>
+<summary>Tôi cần hỗ trợ thêm, liên hệ ai?</summary>
+
+- Đầu mối backend, khai báo SSO: Hà Anh Vũ (vuha13@viettel.com.vn)
+- Đầu mối android: Kiều Văn Bảo (baokv2@viettel.com.vn)
+
+</details>
