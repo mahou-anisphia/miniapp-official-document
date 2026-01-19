@@ -4,15 +4,13 @@ sidebar_position: 2
 
 # Cách thức hoạt động
 
-## Quy trình tải Miniapp
-
 Quy trình tải và thực thi miniapp được chia làm hai giai đoạn chính:
 
-### Giai đoạn 1: App Delivery & Updates
+## Giai đoạn 1: App Delivery & Updates
 
 SuperApp Container yêu cầu thông tin cấu hình và phiên bản từ EMAS (MDS/CDN). Nếu có phiên bản mới, SuperApp sẽ tải về gói miniapp dưới dạng file nén (`.zip`/`.amr`) và giải nén vào bộ nhớ thiết bị.
 
-### Giai đoạn 2: Runtime Execution (Offline-First SPA)
+## Giai đoạn 2: Runtime Execution (Offline-First SPA)
 
 Miniapp được giải nén và thực thi trong môi trường **Nebula Container** (WebView/JS Runtime). Khi miniapp chạy, các logic JavaScript có thể thực hiện các yêu cầu XHR/Fetch trực tiếp đến API Server của đối tác, đảm bảo dữ liệu và logic nghiệp vụ được xử lý độc lập.
 
