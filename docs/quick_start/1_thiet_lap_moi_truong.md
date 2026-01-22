@@ -4,19 +4,27 @@ sidebar_position: 1
 
 # Thiết lập môi trường
 
-## 1. Cài đặt Node.js
+Tải và cài đặt Node.js phiên bản LTS từ [nodejs.org](https://nodejs.org).
 
-Tải và cài đặt Node.js phiên bản LTS từ [nodejs.org](https://nodejs.org/).
+Sau khi cài đặt, kiểm tra bằng terminal nhw sau:
 
-Sau khi cài đặt, kiểm tra bằng terminal:
+Phiên bản nodejs
 
-```bash
+```bash title="Terminal"
 node --version
 # v18.x.x hoặc cao hơn
+```
 
+Phiên bản npm
+
+```bash title="Terminal"
 npm --version
 # 9.x.x hoặc cao hơn
 ```
+
+:::warning Chỉ hỗ trợ npm
+Miniapp **chỉ hỗ trợ npm** làm package manager. Không sử dụng yarn, pnpm hay bun để cài đặt dependencies.
+:::
 
 ## 2. Cài đặt Miniapp Extension
 
@@ -37,18 +45,18 @@ Extension sẽ yêu cầu đăng nhập, nhưng **phát triển local không c�
 
 Bạn cần một trong hai:
 
-| Tùy chọn | Mô tả |
-|----------|-------|
-| **Thiết bị thật** | Kết nối qua USB, bật **USB Debugging** trong Developer Options |
-| **Android Emulator** | Sử dụng Android Studio Emulator hoặc công cụ tương tự |
+| Tùy chọn             | Mô tả                                                          |
+| -------------------- | -------------------------------------------------------------- |
+| **Thiết bị thật**    | Kết nối qua USB, bật **USB Debugging** trong Developer Options |
+| **Android Emulator** | Sử dụng Android Studio Emulator hoặc công cụ tương tự          |
 
 ## Framework được hỗ trợ
 
-| Hỗ trợ đầy đủ | Hỗ trợ có giới hạn |
-|---------------|-------------------|
-| React | Next.js (Client-side mode) |
-| Vue | Nuxt (Client-side mode) |
-| Web H5 thuần | Angular |
+| Hỗ trợ đầy đủ | Hỗ trợ có giới hạn         |
+| ------------- | -------------------------- |
+| React         | Next.js (Client-side mode) |
+| Vue           | Nuxt (Client-side mode)    |
+| Web H5 thuần  | Angular                    |
 
 :::info Tại sao có giới hạn?
 Miniapp là **SPA tĩnh** chạy trong sandbox. Các framework yêu cầu server-side rendering (SSR) cần chuyển sang client-side mode để tương thích.
