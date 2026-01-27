@@ -1,0 +1,28 @@
+## Bước 2: Preview trên VSCode
+
+1. Mở project trong VSCode
+2. Mở **Miniapp Extension** từ sidebar
+3. Chọn **Run Preview in VSCode**
+
+![Miniapp Extension panel](./img/preview_vsc.png)
+
+4. Khi được hỏi "is your miniapp started", chọn **NO**. Browser sẽ mở với miniapp đang chạy
+5. **Copy URL** trên thanh địa chỉ browser (sẽ dùng ở bước sau)
+
+## Bước 3: Preview trên Android
+
+Để test Bridge API (jsAPI), bạn cần chạy miniapp trên thiết bị Android:
+
+1. Trong **Miniapp Extension**, chọn **Preview on Android Device/Emulator**
+
+2. Khi được hỏi _"Enter miniapp URL"_, **paste URL** đã copy từ browser
+
+![Menu preview Android](./img/preview_emulator.png)
+
+3. Miniapp sẽ được load trên thiết bị Android
+
+![Miniapp Running on Android](./img/emulator_results.png)
+
+:::warning Bridge API chỉ hoạt động trên thiết bị mobile (iOS / Android)
+Trên browser, bạn **không thể** gọi Bridge API (jsAPI) vì không có native layer. Các tính năng như camera, GPS, storage... chỉ hoạt động khi preview trên thiết bị mobile (iOS / Android) thật hoặc emulator.
+:::
