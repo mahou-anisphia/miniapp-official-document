@@ -1,0 +1,71 @@
+---
+sidebar_position: 4
+---
+
+import HoTro from "../_shared/_ho_tro.mdx";
+
+# Bước tiếp theo
+
+Bạn đã hoàn thành việc chuyển đổi SPA thành miniapp và preview trên local. Dưới đây là các bước tiếp theo.
+
+## Deploy lên Tammi Platform
+
+Để miniapp có thể hoạt động với đầy đủ tính năng (SSO, Bridge API production), bạn cần deploy lên Tammi Platform.
+
+| Bước | Mô tả |
+|------|-------|
+| **1. Đăng ký tài khoản** | Liên hệ Viettel để được cấp tài khoản developer |
+| **2. Tạo miniapp** | Đăng ký thông tin miniapp trên Platform |
+| **3. Build & Upload** | Chạy `npm run build` và upload bundle lên Platform |
+| **4. Submit review** | Gửi miniapp để được xét duyệt |
+| **5. Publish** | Phát hành miniapp cho người dùng |
+
+:::info Tài liệu deploy
+Hướng dẫn chi tiết quy trình deploy sẽ được cung cấp sau khi bạn có tài khoản developer.
+:::
+
+## Sử dụng Bridge API
+
+Sau khi chuyển đổi thành công, bạn có thể tích hợp các Bridge API (jsAPI) vào SPA:
+
+```typescript title="Ví dụ: Lấy thông tin user"
+// Kiểm tra WindVane có sẵn không
+if (window.WindVane) {
+  window.WindVane.call(
+    'wv',
+    'getAuthCode',
+    { appId: 'YOUR_APP_ID', scopes: ['USER_NAME'] },
+    (result) => {
+      console.log('Auth code:', result.authCode);
+    },
+    (error) => {
+      console.error('Error:', error);
+    }
+  );
+}
+```
+
+:::warning Bridge API chỉ hoạt động trên môi trường production
+Một số Bridge API (như `getAuthCode`) chỉ hoạt động khi miniapp đã deploy lên Tammi Platform, không hoạt động ở chế độ local preview.
+:::
+
+## Ưu điểm của phương thức chuyển đổi SPA
+
+So với [phương thức Webview](../3_miniapp_webview/), chuyển đổi SPA có các ưu điểm:
+
+| Ưu điểm | Mô tả |
+|---------|-------|
+| **Full Bridge API** | Có thể gọi Bridge API bất cứ lúc nào trong app lifecycle |
+| **Hot reload** | Hỗ trợ live reload khi phát triển |
+| **Offline support** | Assets được bundle cùng miniapp, không phụ thuộc network |
+| **Performance** | Không có overhead của iframe/webview |
+
+## Tài liệu tham khảo
+
+| Tài liệu | Mô tả |
+|----------|-------|
+| [Tài liệu Bridge API](../jsapi/) | Chi tiết từng Bridge API (jsAPI) |
+| [Lựa chọn phương thức tích hợp](../1_gioi_thieu/lua_chon_tich_hop) | So sánh các phương thức tích hợp |
+| [Câu hỏi thường gặp](../1_gioi_thieu/cau_hoi_thuong_gap) | FAQ về miniapp |
+
+<HoTro />
