@@ -31,16 +31,16 @@ Nếu `package.json` không có trường `version`, hãy thêm vào. Miniapp pl
 ```json title="package.json"
 {
   "scripts": {
-    "start": "...",   // Chạy development server
-    "build": "..."    // Build production bundle
+    "start": "...", // Chạy development server
+    "build": "..." // Build production bundle
   }
 }
 ```
 
-| Script  | Mục đích                              | Ví dụ                                      |
-| ------- | ------------------------------------- | ------------------------------------------ |
-| `start` | Chạy app ở localhost để preview       | `react-scripts start`, `vite`, `vue serve` |
-| `build` | Build static files để deploy          | `react-scripts build`, `vite build`        |
+| Script  | Mục đích                        | Ví dụ                                      |
+| ------- | ------------------------------- | ------------------------------------------ |
+| `start` | Chạy app ở localhost để preview | `react-scripts start`, `vite`, `vue serve` |
+| `build` | Build static files để deploy    | `react-scripts build`, `vite build`        |
 
 ## Bước 2: Thêm WindVane SDK
 
@@ -57,6 +57,7 @@ Thêm script sau vào file `index.html` (trong thẻ `<head>`):
 
 :::info WindVane là gì?
 WindVane cung cấp object `window.WindVane` để gọi các Bridge API như:
+
 - Lấy thông tin user (SSO)
 - Truy cập camera, GPS
 - Hiển thị native UI (toast, dialog)
@@ -72,15 +73,11 @@ Miniapp yêu cầu sử dụng **hash-based routing** (`/#/path`) thay vì histo
 ### React Router
 
 ```jsx title="src/App.jsx hoặc src/index.jsx"
-import { HashRouter } from 'react-router-dom';
+import { HashRouter } from "react-router-dom";
 
 // Thay BrowserRouter bằng HashRouter
 function App() {
-  return (
-    <HashRouter>
-      {/* Routes của bạn */}
-    </HashRouter>
-  );
+  return <HashRouter>{/* Routes của bạn */}</HashRouter>;
 }
 ```
 
@@ -99,13 +96,13 @@ const router = createRouter({
 ### React Router v5 (legacy)
 
 ```jsx
-import { HashRouter } from 'react-router-dom';
+import { HashRouter } from "react-router-dom";
 
 ReactDOM.render(
   <HashRouter>
     <App />
   </HashRouter>,
-  document.getElementById('root')
+  document.getElementById("root"),
 );
 ```
 
@@ -127,7 +124,7 @@ Thêm trường `homepage` vào `package.json`:
 
 ```js title="vite.config.js"
 export default defineConfig({
-  base: './',
+  base: "./",
   // ...
 });
 ```
@@ -136,7 +133,7 @@ export default defineConfig({
 
 ```js title="vue.config.js"
 module.exports = {
-  publicPath: './',
+  publicPath: "./",
 };
 ```
 

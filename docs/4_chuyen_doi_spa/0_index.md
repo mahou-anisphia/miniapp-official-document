@@ -38,29 +38,30 @@ flowchart LR
 
 ## Yêu cầu
 
-| Yêu cầu                | Mô tả                                                    |
-| ---------------------- | -------------------------------------------------------- |
-| **Source code SPA**    | Project SPA có sẵn (React, Vue, hoặc Web H5 thuần)       |
-| **Node.js**            | Phiên bản LTS (kiểm tra: `node --version`)               |
-| **npm**                | Đi kèm Node.js (kiểm tra: `npm --version`)               |
-| **VSCode Extension**   | Miniapp Extension của Viettel                            |
-| **Android**            | Thiết bị thật hoặc emulator                              |
+| Yêu cầu              | Mô tả                                              |
+| -------------------- | -------------------------------------------------- |
+| **Source code SPA**  | Project SPA có sẵn (React, Vue, hoặc Web H5 thuần) |
+| **Node.js**          | Phiên bản LTS (kiểm tra: `node --version`)         |
+| **npm**              | Đi kèm Node.js (kiểm tra: `npm --version`)         |
+| **VSCode Extension** | Miniapp Extension của Viettel                      |
+| **Android**          | Thiết bị thật hoặc emulator                        |
 
 ## Kiểm tra tính tương thích
 
 Trước khi bắt đầu, hãy đảm bảo SPA của bạn đáp ứng các yêu cầu sau:
 
-| Yêu cầu                  | Mô tả                                                                                      |
-| ------------------------ | ------------------------------------------------------------------------------------------ |
-| **Hash-based routing**   | Miniapp yêu cầu routing dạng `/#/path` thay vì `/path`                                     |
-| **npm package manager**  | Miniapp chỉ hỗ trợ npm, không hỗ trợ yarn/pnpm/bun                                         |
-| **Static SPA**           | Không có server-side rendering (SSR)                                                       |
+| Yêu cầu                 | Mô tả                                                  |
+| ----------------------- | ------------------------------------------------------ |
+| **Hash-based routing**  | Miniapp yêu cầu routing dạng `/#/path` thay vì `/path` |
+| **npm package manager** | Miniapp chỉ hỗ trợ npm, không hỗ trợ yarn/pnpm/bun     |
+| **Static SPA**          | Không có server-side rendering (SSR)                   |
 
 :::warning Framework cần lưu ý
+
 - **React / Vue**: Thường tương thích tốt, chỉ cần chuyển sang hash routing
 - **Next.js / Nuxt**: Phải tắt SSR và sử dụng static export (`output: 'export'` hoặc `ssr: false`)
 - **Angular**: Chưa được kiểm thử đầy đủ, cần liên hệ Viettel để đánh giá
-:::
+  :::
 
 ## Bắt đầu
 
