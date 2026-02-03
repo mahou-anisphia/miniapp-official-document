@@ -15,8 +15,8 @@ Bridge API cho phép miniapp truy cập các tính năng native của thiết b�
 :::info Điều kiện tiên quyết
 Tài liệu này giả định bạn đã:
 - Hiểu [cấu trúc miniapp](../gioi_thieu/cau_truc_miniapp)
-- Quyết định [sử dụng Bridge API](../gioi_thieu/lua_chon_tich_hop)
-- Hoàn thành [thiết lập môi trường](../getting_started/)
+- Quyết định [sử dụng Bridge API](../gioi_thieu/bridge_api)
+- Hoàn thành [thiết lập môi trường](../getting_started/index)
 
 Nếu chưa, vui lòng tham khảo các phần trên trước.
 :::
