@@ -1,6 +1,10 @@
-# Danh sách Bridge API
+---
+sidebar_position: 2
+---
 
-Tất cả Bridge API có sẵn trên nền tảng Tammi, được phân loại theo chức năng.
+# Danh sách jsAPI
+
+Tất cả jsAPI có sẵn trên nền tảng Tammi, được phân loại theo chức năng.
 
 ## App & Base
 

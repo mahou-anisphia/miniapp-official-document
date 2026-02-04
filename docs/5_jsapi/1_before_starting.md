@@ -1,6 +1,10 @@
+---
+sidebar_position: 1
+---
+
 # Trước khi bắt đầu
 
-Bridge API cho phép truy cập tính năng native, nhưng cũng yêu cầu **phê duyệt quyền** từ Superapp để đảm bảo bảo mật.
+jsAPI cho phép truy cập tính năng native, nhưng cũng yêu cầu **phê duyệt quyền** từ Superapp để đảm bảo bảo mật.
 
 ## Quyền hạn (Permissions)
 
@@ -71,4 +75,4 @@ Nếu cần sử dụng API chưa có trong danh sách cho phép:
 
 ## Tiếp theo
 
-Xem [Danh sách Bridge API](./2_dictionary) để lấy mẫu code tích hợp.
+Xem [Danh sách jsAPI](./2_dictionary) để lấy mẫu code tích hợp.

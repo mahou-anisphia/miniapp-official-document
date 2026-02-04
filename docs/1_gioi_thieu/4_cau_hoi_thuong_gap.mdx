@@ -11,7 +11,7 @@ import HoTro from '../_shared/_ho_tro.mdx';
 <details>
 <summary>Miniapp khác gì với web app thông thường?</summary>
 
-Miniapp chạy trong môi trường sandbox của Tammi Superapp, có quyền truy cập vào các tính năng native (camera, GPS, bluetooth...) thông qua Bridge API (jsAPI). Web app thông thường chỉ chạy trong browser với các API web tiêu chuẩn.
+Miniapp chạy trong môi trường sandbox của Tammi Superapp, có quyền truy cập vào các tính năng native (camera, GPS, bluetooth...) thông qua jsAPI. Web app thông thường chỉ chạy trong browser với các API web tiêu chuẩn.
 
 </details>
 
@@ -25,7 +25,7 @@ Có. Bundle miniapp được tải về và cache trên thiết bị sau lần �
 <details>
 <summary>Tôi đã có Web (H5/SPA) sẵn, có thể đưa lên nền tảng miniapp không?</summary>
 
-Có. Vì Bridge API (jsAPI) là tùy chọn, một SPA thuần có thể chạy trực tiếp trên nền tảng miniapp mà không cần chỉnh sửa nhiều. Xem [Hướng dẫn tích hợp SPA](../quick_start/tich_hop_spa).
+Có. Vì jsAPI là tùy chọn, một SPA thuần có thể chạy trực tiếp trên nền tảng miniapp mà không cần chỉnh sửa nhiều. Xem [Hướng dẫn tích hợp SPA](../quick_start/tich_hop_spa).
 
 </details>
 
@@ -36,19 +36,19 @@ Package miniapp không nên vượt quá **2MB** để đảm bảo trải nghi�
 
 </details>
 
-## Bridge API (jsAPI)
+## jsAPI
 
 <details>
-<summary>Bridge API là gì?</summary>
+<summary>jsAPI là gì?</summary>
 
-Bridge API (còn gọi là jsAPI) là lớp trung gian cho phép miniapp giao tiếp với các tính năng native của thiết bị. Mọi tương tác với camera, GPS, bluetooth, file system... đều phải đi qua Bridge API.
+jsAPI là lớp trung gian cho phép miniapp giao tiếp với các tính năng native của thiết bị. Mọi tương tác với camera, GPS, bluetooth, file system... đều phải đi qua jsAPI.
 
 </details>
 
 <details>
 <summary>Tại sao miniapp không thể truy cập trực tiếp tính năng native?</summary>
 
-Miniapp chạy trong sandbox — môi trường cách ly để đảm bảo bảo mật và ổn định. Bridge API là cầu nối duy nhất được SuperApp cung cấp và kiểm soát.
+Miniapp chạy trong sandbox — môi trường cách ly để đảm bảo bảo mật và ổn định. jsAPI là cầu nối duy nhất được SuperApp cung cấp và kiểm soát.
 
 </details>
 

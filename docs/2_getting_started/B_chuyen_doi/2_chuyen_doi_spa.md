@@ -44,7 +44,7 @@ Nếu `package.json` không có trường `version`, hãy thêm vào. Miniapp pl
 
 ## Bước 2: Thêm WindVane SDK
 
-WindVane là thư viện Bridge API (jsAPI) cho phép miniapp giao tiếp với native layer của Tammi Superapp.
+WindVane là thư viện jsAPI cho phép miniapp giao tiếp với native layer của Tammi Superapp.
 
 Thêm script sau vào file `index.html` (trong thẻ `<head>`):
 
@@ -56,14 +56,14 @@ Thêm script sau vào file `index.html` (trong thẻ `<head>`):
 ```
 
 :::info WindVane là gì?
-WindVane cung cấp object `window.WindVane` để gọi các Bridge API như:
+WindVane cung cấp object `window.WindVane` để gọi các jsAPI như:
 
 - Lấy thông tin user (SSO)
 - Truy cập camera, GPS
 - Hiển thị native UI (toast, dialog)
 - Và nhiều tính năng khác
 
-Xem [Tài liệu Bridge API](../jsapi/) để biết chi tiết.
+Xem [Tài liệu jsAPI](../jsapi/) để biết chi tiết.
 :::
 
 ## Bước 3: Chuyển sang Hash Routing

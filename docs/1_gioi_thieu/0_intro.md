@@ -10,7 +10,7 @@ Nền tảng Superapp Tammi được phát triển bởi Viettel Telecom, tập 
 Một Miniapp Tammi hoạt động như sau, với phần chính của Tammi bao gồm:
 
 - **Môi trường runtime**: Cung cấp không gian thực thi cho các miniapp
-- **Bridge API (jsAPI)**: Giao thức giao tiếp giữa miniapp và các tính năng native của thiết bị
+- **jsAPI**: Giao thức giao tiếp giữa miniapp và các tính năng native của thiết bị
 
 <div align="center">
 
@@ -52,7 +52,7 @@ Một Miniapp Tammi hoạt động như sau, với phần chính của Tammi bao
 }}%%
 sequenceDiagram
     participant MiniApp as 🌐 MiniApp<br/>(WebView)
-    participant Bridge as 🔗 JS Bridge
+    participant Bridge as 🔗 jsAPI
     participant Native as 📱 Native App<br/>(iOS/Android)
 
     MiniApp->>Bridge: Gọi API (vd: getLocation())
@@ -62,11 +62,11 @@ sequenceDiagram
     Bridge-->>MiniApp: Callback với data
 ```
 
-_Hình 1: Luồng giao tiếp giữa MiniApp và Native App thông qua JS Bridge_
+_Hình 1: Luồng giao tiếp giữa MiniApp và Native App thông qua jsAPI_
 
 </div>
 
-Nền tảng cung cấp nhiều thư viện và API để lựa chọn, tùy thuộc vào nhu cầu của ứng dụng. Bạn có thể xây dựng một miniapp đơn giản chỉ với logic nghiệp vụ cơ bản, hoặc tận dụng Bridge API để truy cập các tính năng native như camera, GPS - mang lại trải nghiệm tương tự native app.
+Nền tảng cung cấp nhiều thư viện và API để lựa chọn, tùy thuộc vào nhu cầu của ứng dụng. Bạn có thể xây dựng một miniapp đơn giản chỉ với logic nghiệp vụ cơ bản, hoặc tận dụng jsAPI để truy cập các tính năng native như camera, GPS - mang lại trải nghiệm tương tự native app.
 
 ## Bắt đầu phát triển
 

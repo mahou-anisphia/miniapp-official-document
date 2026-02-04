@@ -24,4 +24,4 @@ Ngoài ra, miniapp không hỗ trợ redirect, cho nên đây là cách hiệu q
 | Minigame                        | Không    |
 | App hiển thị nội dung công khai | Không    |
 
-Nếu app của bạn yêu cầu đăng nhập, chúng tôi khuyến khích sử dụng SSO. Nếu không cần đăng nhập, bạn có thể bỏ qua phần này và tiếp tục đến phần [Bridge API](/bridge-api).
+Nếu app của bạn yêu cầu đăng nhập, chúng tôi khuyến khích sử dụng SSO. Nếu không cần đăng nhập, bạn có thể bỏ qua phần này và tiếp tục đến phần [jsAPI](/jsapi).

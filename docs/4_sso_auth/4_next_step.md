@@ -38,9 +38,9 @@ flowchart TD
     style G fill:#E8F5E9,stroke:#44494D,color:#000000
 ```
 
-## Bridge API
+## jsAPI
 
-Tiếp theo, tìm hiểu Bridge API để tương tác với tính năng native của Tammi:
+Tiếp theo, tìm hiểu jsAPI để tương tác với tính năng native của Tammi:
 
 | Khả năng       | Ví dụ                         |
 | -------------- | ----------------------------- |
@@ -49,4 +49,4 @@ Tiếp theo, tìm hiểu Bridge API để tương tác với tính năng native 
 | **Thanh toán** | Cổng thanh toán Tammi         |
 | **Chia sẻ**    | Share lên mạng xã hội         |
 
-[Xem tài liệu Bridge API](/bridge-api)
+[Xem tài liệu jsAPI](/jsapi)

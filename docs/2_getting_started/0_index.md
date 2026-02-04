@@ -23,7 +23,7 @@ Chào mừng bạn đến với hướng dẫn phát triển Miniapp Tammi. Tùy
 
 **Ưu điểm:**
 
-- Truy cập đầy đủ Bridge API
+- Truy cập đầy đủ jsAPI (còn gọi là Bridge API)
 - Tối ưu hiệu năng và trải nghiệm người dùng
 - Hỗ trợ kỹ thuật đầy đủ từ đội ngũ phát triển
 
@@ -37,7 +37,7 @@ Phù hợp khi bạn đã có sẵn ứng dụng Single Page Application (SPA) v
 
 **Ưu điểm:**
 
-- Truy cập đầy đủ Bridge API
+- Truy cập đầy đủ jsAPI
 - Tái sử dụng code có sẵn
 
 **Yêu cầu:**
@@ -60,8 +60,8 @@ Phù hợp khi bạn có website/webapp hoàn chỉnh và muốn tích hợp nha
 
 **Hạn chế:**
 
-- Bridge API chỉ có thể gọi **tại thời điểm khởi tạo** MiniApp
-- Không thể gọi Bridge API trong runtime của webview
+- jsAPI chỉ có thể gọi **tại thời điểm khởi tạo** MiniApp
+- Không thể gọi jsAPI trong runtime của webview
 - Dữ liệu chỉ có thể truyền vào webview một lần (ví dụ: `authCode` qua SSO)
 
 [Bắt đầu tích hợp Webview](./C_webview/index)
@@ -75,5 +75,5 @@ MiniApp chỉ hỗ trợ **hash-based routing**. Nếu ứng dụng SPA của b�
 :::
 
 :::info Khuyến nghị
-Nếu ứng dụng của bạn cần sử dụng **nhiều Bridge API**, chúng tôi khuyến nghị phương thức **Xây mới** để đảm bảo trải nghiệm tốt nhất.
+Nếu ứng dụng của bạn cần sử dụng **nhiều jsAPI**, chúng tôi khuyến nghị phương thức **Xây mới** để đảm bảo trải nghiệm tốt nhất.
 :::

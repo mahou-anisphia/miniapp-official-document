@@ -5,7 +5,7 @@ id: index
 
 # A. Xây mới Miniapp
 
-Hướng dẫn này giúp bạn xây dựng miniapp Tammi từ đầu, chạy trên thiết bị Android và trải nghiệm các tính năng native thông qua Bridge API.
+Hướng dẫn này giúp bạn xây dựng miniapp Tammi từ đầu, chạy trên thiết bị Android và trải nghiệm các tính năng native thông qua jsAPI.
 
 :::info Phạm vi hướng dẫn
 Hướng dẫn này tập trung vào việc **phát triển và preview miniapp trên local**. Quy trình deploy lên Tammi Superapp yêu cầu tài khoản và sẽ được đề cập trong phần riêng.

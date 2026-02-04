@@ -1,8 +1,14 @@
-# Bridge API (jsAPI) - Tổng quan
+---
+sidebar_position: 0
+slug: /index
+---
 
-Bridge API cho phép miniapp truy cập các tính năng native của thiết bị thông qua Tammi Superapp.
 
-## Bridge API có thể làm gì?
+# jsAPI - Tổng quan
+
+jsAPI cho phép miniapp truy cập các tính năng native của thiết bị thông qua Tammi Superapp.
+
+## jsAPI có thể làm gì?
 
 | Khả năng | Ví dụ |
 |----------|-------|
@@ -15,7 +21,7 @@ Bridge API cho phép miniapp truy cập các tính năng native của thiết b�
 :::info Điều kiện tiên quyết
 Tài liệu này giả định bạn đã:
 - Hiểu [cấu trúc miniapp](../gioi_thieu/cau_truc_miniapp)
-- Quyết định [sử dụng Bridge API](../gioi_thieu/bridge_api)
+- Quyết định [sử dụng jsAPI](../gioi_thieu/jsapi)
 - Hoàn thành [thiết lập môi trường](../getting_started/index)
 
 Nếu chưa, vui lòng tham khảo các phần trên trước.
@@ -23,4 +29,4 @@ Nếu chưa, vui lòng tham khảo các phần trên trước.
 
 ## Tiếp theo
 
-Trước khi bắt đầu sử dụng Bridge API, bạn cần hiểu về [quyền hạn và phê duyệt](./1_before_starting).
+Trước khi bắt đầu sử dụng jsAPI, bạn cần hiểu về [quyền hạn và phê duyệt](./1_before_starting).

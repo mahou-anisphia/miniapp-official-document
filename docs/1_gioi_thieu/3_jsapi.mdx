@@ -4,11 +4,11 @@ sidebar_position: 3
 
 import HoTro from "../_shared/_ho_tro.mdx";
 
-# Bridge API (jsAPI)
+# jsAPI (Bridge API)
 
-## Bridge API cho phép bạn làm gì?
+## jsAPI cho phép bạn làm gì?
 
-Bridge API (jsAPI) là cầu nối giữa miniapp và các tính năng native của thiết bị. Nhờ đó, miniapp có thể:
+jsAPI là cầu nối giữa miniapp và các tính năng native của thiết bị. Nhờ đó, miniapp có thể:
 
 | Khả năng                | Ví dụ use case                                   |
 | ----------------------- | ------------------------------------------------ |
@@ -18,11 +18,11 @@ Bridge API (jsAPI) là cầu nối giữa miniapp và các tính năng native c�
 | **Điều hướng**          | Mở Mini App khác trong hệ sinh thái Tammi        |
 | **Lưu trữ**             | Lưu dữ liệu local trên thiết bị                  |
 
-:::tip Web app thuần có thể chạy mà không cần Bridge API
-Bridge API là **tùy chọn**. Nếu miniapp chỉ cần logic nghiệp vụ cơ bản và không cần truy cập phần cứng, bạn hoàn toàn có thể bỏ qua phần này.
+:::tip Web app thuần có thể chạy mà không cần jsAPI
+jsAPI là **tùy chọn**. Nếu miniapp chỉ cần logic nghiệp vụ cơ bản và không cần truy cập phần cứng, bạn hoàn toàn có thể bỏ qua phần này.
 :::
 
-## Kiến trúc Bridge API
+## Kiến trúc jsAPI
 
 ```mermaid
 %%{init: {
@@ -37,7 +37,7 @@ Bridge API là **tùy chọn**. Nếu miniapp chỉ cần logic nghiệp vụ c�
   }
 }}%%
 flowchart TD
-    A["Mini App<br/>(JavaScript)"] -->|"WindVane.call()"| B["Bridge API Layer"]
+    A["Mini App<br/>(JavaScript)"] -->|"WindVane.call()"| B["jsAPI Layer"]
     B -->|"Chuyển tiếp"| C["Native SDK<br/>(iOS/Android)"]
     C -->|"Truy cập"| D["Tính năng thiết bị<br/>(Camera, GPS, Storage...)"]
 
@@ -54,9 +54,9 @@ flowchart TD
 3. Native thực thi (yêu cầu quyền nếu cần)
 4. Kết quả trả về qua callback `success` hoặc `fail`
 
-## Giới hạn kỹ thuật của Bridge API
+## Giới hạn kỹ thuật của jsAPI
 
-Bridge API mạnh mẽ nhưng **không phải là native app**. Một số giới hạn cần lưu ý:
+jsAPI mạnh mẽ nhưng **không phải là native app**. Một số giới hạn cần lưu ý:
 
 | Giới hạn                    | Giải thích                         | Giải pháp                                    |
 | --------------------------- | ---------------------------------- | -------------------------------------------- |
@@ -75,7 +75,7 @@ Miniapp chạy trong **sandbox** để đảm bảo bảo mật và ổn định
 :::caution Yêu cầu tư vấn từ Viettel
 Trong một số trường hợp **hiếm gặp**, miniapp cần tích hợp SDK của bên thứ ba (ví dụ: SDK thanh toán đặc thù, analytics platform) **trực tiếp vào native layer** của Tammi Superapp.
 
-**Luồng:** Miniapp → Bridge API → **SDK đã tích hợp sẵn trong Superapp** → Thiết bị
+**Luồng:** Miniapp → jsAPI → **SDK đã tích hợp sẵn trong Superapp** → Thiết bị
 
 **Điều kiện:**
 
@@ -83,14 +83,14 @@ Trong một số trường hợp **hiếm gặp**, miniapp cần tích hợp SDK
 - Chỉ áp dụng khi **không thể** xử lý qua backend API thông thường
 - Thời gian tích hợp phụ thuộc chu kỳ release của Superapp (thường 2-4 tuần)
 
-**Khi nào cần:** Khi SDK yêu cầu quyền truy cập native (ví dụ: SDK xác thực sinh trắc học, SDK VoIP) mà Bridge API hiện tại không hỗ trợ.
+**Khi nào cần:** Khi SDK yêu cầu quyền truy cập native (ví dụ: SDK xác thực sinh trắc học, SDK VoIP) mà jsAPI hiện tại không hỗ trợ.
 
 Nếu miniapp của bạn thuộc trường hợp này, liên hệ Viettel để được tư vấn và đánh giá khả thi.
 :::
 
 ## Sample Code đầy đủ
 
-Repository mẫu demo **toàn bộ Bridge API** có sẵn:
+Repository mẫu demo **toàn bộ jsAPI** có sẵn:
 
 👉 **https://github.com/mahou-anisphia/miniapp-sample-code**
 
@@ -126,9 +126,9 @@ npm start
 
 ## Tiếp theo
 
-**Chưa chắc cần Bridge API?** Xem [Lựa chọn phương thức tích hợp](./lua_chon_tich_hop) để so sánh các phương án phù hợp với nhu cầu của bạn.
+**Chưa chắc cần jsAPI?** Xem [Lựa chọn phương thức tích hợp](./lua_chon_tich_hop) để so sánh các phương án phù hợp với nhu cầu của bạn.
 
-**Đã quyết định dùng Bridge API?** Tiếp tục với:
+**Đã quyết định dùng jsAPI?** Tiếp tục với:
 
 - **Chi tiết từng API**: [Tài liệu jsAPI](../jsapi/) - tham số, quyền yêu cầu, use case
 - **Bắt đầu phát triển**: [Quick Start](../quick_start/index) - chạy miniapp đầu tiên với boilerplate

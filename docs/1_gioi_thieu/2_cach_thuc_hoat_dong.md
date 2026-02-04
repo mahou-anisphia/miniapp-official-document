@@ -84,7 +84,7 @@ flowchart TB
             subgraph Sandbox["Sandbox - Cách ly"]
                 Miniapp["Miniapp<br/>(HTML/CSS/JS)"]
             end
-            Bridge["Bridge API (jsAPI)"]
+            Bridge["jsAPI"]
         end
         Native["Native Features<br/>(Camera, GPS, Storage...)"]
         OS["Hệ điều hành"]
@@ -123,11 +123,11 @@ Do chạy trong sandbox, miniapp **không thể**:
 - Giao tiếp với các app khác trên thiết bị
 - Vượt quá giới hạn dung lượng bundle và storage
 
-**Mọi tương tác với bên ngoài đều phải đi qua Bridge API (jsAPI)** — lớp trung gian do SuperApp cung cấp và kiểm soát.
+**Mọi tương tác với bên ngoài đều phải đi qua jsAPI** — lớp trung gian do SuperApp cung cấp và kiểm soát.
 
-## Giao tiếp qua Bridge API (jsAPI)
+## Giao tiếp qua jsAPI
 
-Bridge API (jsAPI) là **cầu nối duy nhất** giữa miniapp và native layer:
+jsAPI là **cầu nối duy nhất** giữa miniapp và native layer:
 
 ```javascript
 window.WindVane.call(

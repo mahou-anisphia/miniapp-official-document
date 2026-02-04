@@ -10,7 +10,7 @@ Bạn đã hoàn thành việc chuyển đổi SPA thành miniapp và preview tr
 
 ## Deploy lên Tammi Platform
 
-Để miniapp có thể hoạt động với đầy đủ tính năng (SSO, Bridge API production), bạn cần deploy lên Tammi Platform.
+Để miniapp có thể hoạt động với đầy đủ tính năng (SSO, jsAPI production), bạn cần deploy lên Tammi Platform.
 
 | Bước                     | Mô tả                                              |
 | ------------------------ | -------------------------------------------------- |
@@ -24,9 +24,9 @@ Bạn đã hoàn thành việc chuyển đổi SPA thành miniapp và preview tr
 Hướng dẫn chi tiết quy trình deploy sẽ được cung cấp sau khi bạn có tài khoản developer.
 :::
 
-## Sử dụng Bridge API
+## Sử dụng jsAPI
 
-Sau khi chuyển đổi thành công, bạn có thể tích hợp các Bridge API (jsAPI) vào SPA:
+Sau khi chuyển đổi thành công, bạn có thể tích hợp các jsAPI vào SPA:
 
 ```typescript title="Ví dụ: Lấy thông tin user"
 // Kiểm tra WindVane có sẵn không
@@ -45,8 +45,8 @@ if (window.WindVane) {
 }
 ```
 
-:::warning Bridge API chỉ hoạt động trên môi trường production
-Một số Bridge API (như `getAuthCode`) chỉ hoạt động khi miniapp đã deploy lên Tammi Platform, không hoạt động ở chế độ local preview.
+:::warning jsAPI chỉ hoạt động trên môi trường production
+Một số jsAPI (như `getAuthCode`) chỉ hoạt động khi miniapp đã deploy lên Tammi Platform, không hoạt động ở chế độ local preview.
 :::
 
 ## Ưu điểm của phương thức chuyển đổi SPA
@@ -55,7 +55,7 @@ So với [phương thức Webview](../3_miniapp_webview/), chuyển đổi SPA c
 
 | Ưu điểm             | Mô tả                                                    |
 | ------------------- | -------------------------------------------------------- |
-| **Full Bridge API** | Có thể gọi Bridge API bất cứ lúc nào trong app lifecycle |
+| **Full jsAPI** | Có thể gọi jsAPI bất cứ lúc nào trong app lifecycle |
 | **Hot reload**      | Hỗ trợ live reload khi phát triển                        |
 | **Offline support** | Assets được bundle cùng miniapp, không phụ thuộc network |
 | **Performance**     | Không có overhead của iframe/webview                     |
@@ -64,7 +64,7 @@ So với [phương thức Webview](../3_miniapp_webview/), chuyển đổi SPA c
 
 | Tài liệu                                                           | Mô tả                            |
 | ------------------------------------------------------------------ | -------------------------------- |
-| [Tài liệu Bridge API](../jsapi/)                                   | Chi tiết từng Bridge API (jsAPI) |
+| [Tài liệu jsAPI](../jsapi/)                                   | Chi tiết từng jsAPI |
 | [Lựa chọn phương thức tích hợp](../1_gioi_thieu/lua_chon_tich_hop) | So sánh các phương thức tích hợp |
 | [Câu hỏi thường gặp](../1_gioi_thieu/cau_hoi_thuong_gap)           | FAQ về miniapp                   |
 

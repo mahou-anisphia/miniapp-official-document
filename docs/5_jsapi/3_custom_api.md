@@ -1,6 +1,10 @@
+---
+sidebar_position: 3
+---
+
 # Yêu cầu API tùy chỉnh
 
-Trong một số trường hợp hiếm gặp, miniapp cần tích hợp SDK bên thứ ba hoặc tính năng native chưa có trong danh sách Bridge API.
+Trong một số trường hợp hiếm gặp, miniapp cần tích hợp SDK bên thứ ba hoặc tính năng native chưa có trong danh sách jsAPI.
 
 ## Khi nào cần Custom API?
 
