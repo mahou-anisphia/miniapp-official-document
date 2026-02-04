@@ -52,13 +52,6 @@ window.WindVane.call('WVCamera', 'takePhoto', {},
 );
 ```
 
-### Cách 3: Kiểm tra qua Dashboard
-
-1. Đăng nhập [Dashboard](https://dashboard.tammi.vn)
-2. Chọn miniapp của bạn
-3. Vào tab **JSAPI Feature**
-4. Xem danh sách API đã được kích hoạt (Active) cho AppId của bạn
-
 ## Xin cấp quyền mới
 
 Nếu cần sử dụng API chưa có trong danh sách cho phép:
@@ -71,9 +64,25 @@ Nếu cần sử dụng API chưa có trong danh sách cho phép:
 
 **Bước 4:** Submit và chờ phê duyệt
 
+:::note Lưu ý
+Nếu bạn không thấy JSAPI cần tìm trong danh sách, có thể API đó đã được cấp quyền mặc định hoặc không tồn tại trong hệ thống.
+:::
+
 :::info Thời gian phê duyệt
 Thông thường mất **1-2 ngày làm việc** để Viettel xem xét và phê duyệt quyền sử dụng API.
 :::
+
+### Xem hướng dẫn chi tiết qua video dưới đây
+
+<iframe
+  width="100%"
+  height="450"
+  src="https://www.youtube.com/embed/ZPbOqGG0HWM?si=4LytDG0quggiylLX"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+></iframe>
 
 ## Xử lý lỗi thường gặp
 
@@ -83,57 +92,6 @@ Thông thường mất **1-2 ngày làm việc** để Viettel xem xét và phê
 | `API_NOT_FOUND` | API không tồn tại hoặc tên sai | Kiểm tra lại tên module/method |
 | `INVALID_PARAMS` | Tham số không hợp lệ | Xem lại tài liệu API |
 | `USER_DENIED` | User từ chối cấp quyền | Giải thích rõ lý do cần quyền |
-
-## Best Practices
-
-### 1. Luôn kiểm tra quyền trước khi gọi
-
-```javascript
-const checkAndUseCamera = async () => {
-  // Kiểm tra quyền
-  window.WindVane.call('WVBase', 'canIUse', { api: 'takePhoto' }, (result) => {
-    if (result.result) {
-      // Có quyền - gọi API
-      window.WindVane.call('WVCamera', 'takePhoto', {}, successCallback, errorCallback);
-    } else {
-      // Không có quyền - hiển thị thông báo
-      alert('Miniapp chưa được cấp quyền sử dụng Camera');
-    }
-  });
-};
-```
-
-### 2. Xử lý fallback khi API không khả dụng
-
-```javascript
-const getLocation = () => {
-  window.WindVane.call('WVLocation', 'getLocation', {},
-    (result) => {
-      console.log('Vị trí:', result.coords);
-    },
-    (error) => {
-      // Fallback: yêu cầu user nhập địa chỉ thủ công
-      showManualAddressInput();
-    }
-  );
-};
-```
-
-### 3. Cung cấp thông tin rõ ràng về quyền
-
-Khi yêu cầu quyền, giải thích tại sao miniapp cần quyền đó:
-
-```javascript
-const requestCameraPermission = () => {
-  showDialog({
-    title: 'Cấp quyền Camera',
-    message: 'Miniapp cần quyền truy cập Camera để bạn có thể quét mã QR thanh toán',
-    onConfirm: () => {
-      window.WindVane.call('WVCamera', 'takePhoto', {}, ...);
-    }
-  });
-};
-```
 
 ## Tiếp theo
 
